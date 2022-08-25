@@ -241,7 +241,10 @@ order by customerid
 limit 5;
 
 -- 15. ------------------------------------------
-
+select LastName, FirstName,
+    (cast(strftime('%Y') as integer) - cast(BirthDate as integer) + 1) "나이"
+from employees
+order by EmployeeId;
 
 -- 16. ---------------------------------------
 select ArtistId from albums
